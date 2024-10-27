@@ -1,0 +1,73 @@
+.friend-requests {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.request-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.request-card:hover {
+  transform: translateY(-5px);
+}
+
+.request-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.request-info {
+  flex: 1;
+}
+
+.request-info h3 {
+  margin: 0 0 0.5rem 0;
+}
+
+.request-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.accept-btn, .reject-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.accept-btn:hover, .reject-btn:hover {
+  transform: scale(1.05);
+}
+
+.accept-btn {
+  background: var(--accent);
+}
+
+.reject-btn {
+  background: var(--primary)  #f31000;
+}
+
+.request-card.accepted {
+  border-left: 4px solid #4CAF50;
+}
+
+.request-card.rejected {
+  border-left: 4px solid #f31000;
+  opacity: 0.7;
+}
